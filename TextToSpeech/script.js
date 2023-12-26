@@ -1,0 +1,27 @@
+let speech = new SpeechSynthesisUtterance();
+
+let voices = [];
+
+let voiceSelect = document.querySelector("select");
+
+window.speechSynthesis.onvoiceschanged = () => {
+  voices = window.speechSynthesis.getVoices();
+  speech.voice = voices[0];
+
+  voices.forEach((voice, i) => {
+    voiceSelect.options[i] = new Option(voice.name, i);
+  });
+};
+
+voiceSelect.addEventListener("click", () => {
+  speech.voice = voices[voiceSelect.value];
+});
+
+document.querySelector("button").addEventListener("click", () => {
+  //** Setting text and Voice of Speech..
+  speech.text = document.querySelector("textarea").value;
+  //speech.voice (is by default....)
+
+  //Speak the speech
+  window.speechSynthesis.speak(speech);
+});

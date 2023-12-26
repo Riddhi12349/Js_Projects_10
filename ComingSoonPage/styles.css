@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width : 100%;
+    height: 100vh; 
+    background-image: url(images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 100px;
+    position: relative;
+}
+.container .rocket {
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+    width: 300px;
+    animation : rocket 4s linear infinite;
+    /* animation-direction: normal; */
+}
+@keyframes rocket{
+    0%{
+        bottom: 0px;
+        opacity: 0;
+    }
+    100%{
+       bottom: 605px;
+       opacity: 1;
+    }
+}
+.logo{
+    width: 160px;
+    height: 40px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    color: white;
+    padding-top: 160px;
+}
+
+.content h1 {
+    font-size: 50px;
+    /* margin: 20px 0;
+    margin-top: 8px; */
+    margin: 8px 0 18px;
+}
+
+.content h1 span {
+    color : #ED2B2A;
+}
+.time{
+    display: flex;
+    flex-direction: row;
+}
+.time  span {
+    font-size: 15px;
+    /* margin-right: 20px; */
+    font-family: cursive;
+}
+
+.time p {
+    font-size: 70px;
+    font-family: cursive;
+    margin-right: 30px;
+}
+
+
+.container button{
+background: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+     border : 2px solid #fff;
+    font-size: 16px;
+    margin-top : 40px;
+}
+.container button:hover{
+    border: 1px solid black;
+}
+.play{
+    width : 16px;
+    margin-right: 10px;
+}
+
